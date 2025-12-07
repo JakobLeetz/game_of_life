@@ -86,8 +86,8 @@ int main() {
   }
   initMap(cMap);
   calcNeighboors(cMap);
-
   printMap(cMap, true, 0);
+  sleep(2);
 
   for(int i = 0; i < ITERATIONS; ++i){
     for(int j = 0; j < SIZE; ++j){
