@@ -59,22 +59,26 @@ void printMap(c **cMap, bool initial, int iteration){
     printf("\033[J");  
   }
   printf("Iteration: %d\n", iteration);
-  for(int i = 0; i < SIZE + 1; i++)
-    printf("--");
+  printf("\u250c");
+  for(int i = 0; i < SIZE; i++)
+    printf("\u2500\u2500");
+  printf("\u2510");  
   printf("\n");
   for(int i = 0; i < SIZE; ++i){
-    printf("|");
+    printf("\u2502");
     for(int j = 0; j < SIZE; ++j){
       if(cMap[i][j].alive)
         printf("\033[47m  \033[0m");
       else 
         printf("  ");
     }
-    printf("|");
+    printf("\u2502");
     printf("\n");
   }
-  for(int i = 0; i < SIZE + 1; i++)
-    printf("--");
+  printf("\u2514");
+  for(int i = 0; i < SIZE; i++)
+    printf("\u2500\u2500");
+  printf("\u2518");
   printf("\n");
 }
 
