@@ -12,16 +12,7 @@ typedef struct {
 } c;
 
 bool calcNewC(c c){
-  switch(c.neighboors){
-    case 2:
-      if (c.alive) return true;
-      break;
-    case 3:
-      return true;
-    default: 
-      return false;
-  }
-  return false;
+  return (c.neighboors == 3) || (c.neighboors == 2 && c.alive);  
 }
 
 void initMap(c **cMap){
